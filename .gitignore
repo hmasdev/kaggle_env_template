@@ -160,9 +160,9 @@ cython_debug/
 #.idea/
 
 # Kaggle
-./data
-./results
-./models
+data
+results
+models
 
 # pickle
 *.pkl
