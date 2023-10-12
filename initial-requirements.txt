@@ -26,6 +26,7 @@ optuna
 
 matplotlib
 seaborn
+pydantic
 jupyter
 jupyterlab
 ipynbname
