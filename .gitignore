@@ -164,5 +164,9 @@ cython_debug/
 ./results
 ./models
 
+# pickle
+*.pkl
+*.pickle
+
 # VSCode
 .vscode
