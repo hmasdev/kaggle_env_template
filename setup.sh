@@ -7,13 +7,11 @@ VENV="venv"
 REQUIREMENTS="initial-requirements.txt"
 
 DATA_DIREC="./data"
+KAGGLE_INPUT="./kaggle/input"
 RAW_DATA_DIREC="./data/raw"
 RESULT_DIREC="./results"
 MODEL_DIREC="./models"
-NOTEBOOK_DIREC="./notebook"
-DATA_NOTEBOOK_DIREC="./notebook/data"
-EDA_NOTEBOOK_DIREC="./notebook/eda"
-ML_NOTEBOOK_DIREC="./notebook/models"
+NOTEBOOK_DIREC="./notebooks"
 
 COMPETITION_NAME="$1"
 
@@ -24,14 +22,13 @@ source ./$VENV/Scripts/activate
 
 # make dirs
 mkdir -p $DATA_DIREC
+mkdir -p $KAGGLE_INPUT
 mkdir -p $RAW_DATA_DIREC
 mkdir -p $RESULT_DIREC
 mkdir -p $MODEL_DIREC
 mkdir -p $NOTEBOOK_DIREC
-mkdir -p $DATA_NOTEBOOK_DIREC
-mkdir -p $EDA_NOTEBOOK_DIREC
-mkdir -p $ML_NOTEBOOK_DIREC
 
 # Download
 ./$VENV/Scripts/kaggle competitions download -c $COMPETITION_NAME -p $RAW_DATA_DIREC
 unzip -d $RAW_DATA_DIREC $RAW_DATA_DIREC/$COMPETITION_NAME
+cp -r $RAW_DATA_DIREC/$COMPETITION_NAME $KAGGLE_INPUT/
