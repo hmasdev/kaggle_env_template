@@ -30,6 +30,7 @@ pydantic
 jupyter
 jupyterlab
 ipynbname
+ipython
 ipywidgets==7.*
 jupyterlab_widgets==1.*
 tqdm
