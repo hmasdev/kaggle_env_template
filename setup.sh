@@ -22,7 +22,7 @@ source ./$VENV/Scripts/activate
 
 # make dirs
 mkdir -p $DATA_DIREC
-mkdir -p $KAGGLE_INPUT
+mkdir -p $KAGGLE_INPUT/$COMPETITION_NAME/
 mkdir -p $RAW_DATA_DIREC
 mkdir -p $RESULT_DIREC
 mkdir -p $MODEL_DIREC
@@ -31,4 +31,4 @@ mkdir -p $NOTEBOOK_DIREC
 # Download
 ./$VENV/Scripts/kaggle competitions download -c $COMPETITION_NAME -p $RAW_DATA_DIREC
 unzip -d $RAW_DATA_DIREC $RAW_DATA_DIREC/$COMPETITION_NAME
-cp -r $RAW_DATA_DIREC/$COMPETITION_NAME $KAGGLE_INPUT/
+cp -r $RAW_DATA_DIREC/* $KAGGLE_INPUT/$COMPETITION_NAME/

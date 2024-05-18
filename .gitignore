@@ -160,6 +160,7 @@ cython_debug/
 #.idea/
 
 # Kaggle
+kaggle
 data
 results
 models
