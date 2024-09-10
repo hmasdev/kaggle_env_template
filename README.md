@@ -9,9 +9,9 @@ This repository provides a template of Kaggle experiment environment.
 
 ## Requirements
 
-- `python==3.10.11`
+- `python`
+- `uv`
 - `bash`
-- `git`
 
 ## How to Use
 
@@ -23,12 +23,6 @@ cd $YOUR_ENV_DIR_NAME
 ./setup.sh $KAGGLE_COMPETITION_NAME
 ```
 
-If you want to use your local GPU, run the following command after the above commands:
-
-```sh
-./postsetup-gpu.sh
-```
-
 In the above commands, `$YOUR_ENV_DIR_NAME` is the name of the dirctory which you want to create and `$KAGGLE_COMPETITION_NAME` is the name of a Kaggle competition.
 For example, when you want to create the experiment environment for [https://www.kaggle.com/competitions/titanic/overview](https://www.kaggle.com/competitions/titanic/overview), `$KAGGLE_COMPETITION_NAME` is `titanic`, i.e. `$KAGGLE_COMPETITION_NAME` will be the string between [https://www.kaggle.com/competitions/](https://www.kaggle.com/competitions/) and /overview in the URL of the competition's overview.
 
@@ -36,7 +30,7 @@ After executing `./setup.sh $KAGGLE_COMPETITION_NAME`, you will see the followin
 
 ```sh
 .
-├───venv        # This is the python virtual environment for this project
+├───.venv       # This is the python virtual environment for this project
 |───kaggle      # This is a dirctory for datasets
 │   └───input
 │       └───{the name of compedition}
