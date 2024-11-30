@@ -1,13 +1,16 @@
-name: Tests On Schedule
+name: Tests On Schedule / On Push
 # NOTE: temporal test job
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
+  push:
+    branches:
+      - "*"
 
 jobs:
-  run-pytest:
+  run-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
