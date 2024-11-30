@@ -16,8 +16,6 @@ dependencies = [
     "ipython==8.21.0",
     "jupyterlab==4.2.4",
     "kaggle==1.6.17",
-    "kaggle-environments==1.14.15",
-    "kagglehub==0.3.1",
     "lightgbm==4.2.0",
     "lime==0.2.0.1",
     "matplotlib==3.7.5",
